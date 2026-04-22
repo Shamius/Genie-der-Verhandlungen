@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Гений переговоров — предыгровой тест</title>
+<style>
+:root{
+  --bg:#0f1f17;
+  --bg2:#102820;
+  --table:#14532d;
+  --gold:#f2c94c;
+  --gold2:#c89b2f;
+  --red:#eb5757;
+  --text:#1f2937;
+  --muted:#667085;
+  --card:#ffffff;
+  --line:#e8edf3;
+  --shadow:0 18px 48px rgba(7,17,12,.22);
+  --r:22px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Calibri,Arial,sans-serif;color:#fff;background:radial-gradient(1200px 520px at 20% -10%,rgba(242,201,76,.12),transparent 46%),radial-gradient(1100px 540px at 100% 0%,rgba(255,255,255,.06),transparent 42%),linear-gradient(160deg,var(--bg),var(--bg2));min-height:100vh}
+.wrap{width:min(980px,calc(100vw - 28px));margin:28px auto 36px}
+.hero{padding:28px;border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);box-shadow:0 20px 60px rgba(0,0,0,.18);backdrop-filter:blur(8px);margin-bottom:18px}
+.eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(242,201,76,.14);border:1px solid rgba(242,201,76,.22);color:#ffe8a3;font-size:14px;margin-bottom:14px}
+h1{margin:0 0 12px;font-size:clamp(30px,5vw,48px);line-height:1.04}
+.hero p{margin:0 0 10px;color:rgba(255,255,255,.9);font-size:18px;line-height:1.55;max-width:820px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.chip{padding:9px 12px;border-radius:999px;font-size:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)}
+.panel{background:var(--card);color:var(--text);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}.hidden{display:none!important}
+.start,.result{padding:28px}.start h2,.result h2{margin:0 0 10px;font-size:30px}.start p,.result p.lead{margin:0 0 10px;color:var(--muted);font-size:17px;line-height:1.55;max-width:820px}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(240px,1fr));gap:12px;margin:18px 0 10px}.legend-card{border:1px solid var(--line);border-radius:18px;padding:14px 15px;background:#fbfcff}.legend-title{margin:0 0 6px;font-size:18px;font-weight:700}.legend-card p{margin:0;color:var(--muted);font-size:15px;line-height:1.45}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px}button{border:0;cursor:pointer;border-radius:14px;padding:14px 18px;font:inherit;font-size:16px;transition:.15s ease}button:hover{transform:translateY(-1px)}button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#2c2205;min-width:180px;font-weight:700}.btn-secondary{background:#eef4fb;color:var(--text)}.btn-ghost{background:#fff;color:var(--muted);border:1px solid var(--line)}
+.quiz-top{padding:18px 22px 0;display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:15px}.progress{margin:12px 22px 0;height:10px;border-radius:999px;background:#eef2f8;overflow:hidden}.bar{width:0;height:100%;background:linear-gradient(90deg,var(--gold),#27ae60);transition:width .22s ease}.quiz-body{padding:18px 22px 24px}.tag{display:inline-block;padding:7px 11px;border-radius:999px;background:#fff6db;color:#8b6b17;font-size:14px;margin-bottom:12px}.question{margin:0 0 8px;font-size:clamp(24px,3vw,34px);line-height:1.18}.help{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.48}
+.options{display:grid;gap:12px;margin-bottom:16px}.option{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;transition:.14s ease}.option:hover{transform:translateY(-1px);border-color:#dfc778;background:#fffdfa}.option.selected{border-color:#e3c263;background:#fff9ea}.option-top{display:flex;gap:12px;align-items:flex-start}.badge{width:34px;height:34px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;background:#f5f7fb;color:#4d5878;flex:0 0 34px}.statement{flex:1;font-size:18px;line-height:1.5}.choice-row{display:flex;gap:16px;flex-wrap:wrap;padding-left:46px;margin-top:10px}.choice{display:flex;gap:8px;align-items:center;font-size:15px;color:var(--muted)}.choice input{accent-color:#b8891d;transform:scale(1.08)}
+.quiz-controls{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
+.main-card{border:1px solid var(--line);border-radius:22px;padding:20px;background:linear-gradient(180deg,#fffdfa,#fff)}.main-title{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:28px;line-height:1.15}.token{width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));box-shadow:0 0 0 4px rgba(242,201,76,.18)}.main-card p{margin:0;color:var(--muted);font-size:17px;line-height:1.58}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(280px,1fr));gap:14px;margin-top:14px}.card{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff}.card h3{margin:0 0 8px;font-size:22px}.card p{margin:0;color:var(--muted);line-height:1.55;font-size:16px}.footer-note{margin-top:16px;color:var(--muted);font-size:14px;line-height:1.5}
+@media (max-width:780px){.legend,.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Предыгровая настройка</div>
+    <h1>Гений переговоров: на что тебе сделать ставку перед игрой</h1>
+    <p>Это не тест на знание переговорной теории. Это короткая настройка перед партией: на что тебе особенно важно опираться за столом, чтобы не сорваться в привычную, но не самую выгодную реакцию.</p>
+    <p>На выходе ты получишь один главный режим на игру — коротко, по делу и с понятной формулой, которую можно держать в голове во время партии.</p>
+    <div class="chips"><div class="chip">12 вопросов</div><div class="chip">слегка игровой стиль</div><div class="chip">один главный настрой</div><div class="chip">без скучной морали</div></div>
+  </section>
+
+  <section class="panel start" id="startScreen">
+    <h2>Перед входом за стол</h2>
+    <p>В каждом вопросе выбери один вариант, который чаще всего похож на тебя в напряжённой коммуникации.</p>
+    <p>Отвечай не «как красиво» и не «как надо», а как у тебя реально чаще срабатывает.</p>
+    <div class="legend">
+      <div class="legend-card"><div class="legend-title">Не клюй на бестактность</div><p>Если тебя цепляют тоном, не отдавай партию реакции на укол.</p></div>
+      <div class="legend-card"><div class="legend-title">Не женись на первой позиции</div><p>Первая идея — ещё не стратегия. Оставь себе пространство для перестройки.</p></div>
+      <div class="legend-card"><div class="legend-title">Сначала вскрывай интересы</div><p>Пока ты споришь только с позицией, ты ещё не дошёл до сути игры.</p></div>
+      <div class="legend-card"><div class="legend-title">Держи паузу, не суетись</div><p>Тишина — не пустота. Иногда это самый дорогой ход за столом.</p></div>
+    </div>
+    <div class="legend" style="grid-template-columns:1fr;">
+      <div class="legend-card"><div class="legend-title">Играй не одним ходом, а комбинацией</div><p>Сильный игрок редко тащит одну-единственную линию. Он собирает пакет и расширяет поле.</p></div>
+    </div>
+    <div class="controls"><span></span><button class="btn-primary" id="startBtn">Начать</button></div>
+  </section>
+
+  <section class="panel hidden" id="quizScreen">
+    <div class="quiz-top"><div id="progressText">Вопрос 1 из 12</div><div>Ставки сделаны. Выбирай честно.</div></div>
+    <div class="progress"><div class="bar" id="progressBar"></div></div>
+    <div class="quiz-body">
+      <div class="tag" id="questionTag"></div>
+      <h2 class="question" id="questionText"></h2>
+      <p class="help" id="questionHelp"></p>
+      <div id="questionBody"></div>
+      <div class="quiz-controls">
+        <button class="btn-ghost" id="prevBtn">Назад</button>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;"><button class="btn-secondary" id="skipBtn">Пропустить</button><button class="btn-primary" id="nextBtn">Дальше</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel result hidden" id="resultScreen">
+    <h2>Твой режим на эту игру</h2>
+    <p class="lead">Это не характеристика личности и не постоянный ярлык. Это подсказка, на какое поведение тебе особенно полезно сделать ставку именно перед партией.</p>
+    <div class="main-card">
+      <div class="main-title"><span class="token"></span><span id="resultTitle"></span></div>
+      <p id="resultText"></p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>На что держать курс</h3><p id="focusText"></p></div>
+      <div class="card"><h3>Что может утащить в сторону</h3><p id="riskText"></p></div>
+      <div class="card"><h3>Короткая формула на игру</h3><p id="formulaText"></p></div>
+      <div class="card"><h3>Зачем тебе это в партии</h3><p id="benefitText"></p></div>
+    </div>
+    <div class="controls"><div class="footer-note">Это предыгровая настройка, а не оценка «хороший / плохой переговорщик». Смысл в том, чтобы зайти за стол чуть осознаннее и сыграть сильнее.</div><button class="btn-primary" id="restartBtn">Пройти заново</button></div>
+  </section>
+</div>
+<script>
+const STORAGE_KEY='negotiation-genius-preset-v1';
+const MODES={
+  tact:{title:'Не клюй на бестактность',text:'Похоже, твой главный риск перед игрой — начать реагировать не на задачу, а на тон. Если тебя поддевают, обесценивают или разговаривают сверху вниз, тебе может захотеться ответить на это сразу. В игре это часто уводит из расчёта в реакцию.',focus:'Не отвечай на укол как на главный предмет разговора. Держи линию, возвращай разговор к интересу, рамке или вопросу.',risk:'Тебя может сорвать в обмен колкостями, внутреннее раздражение или желание поставить человека на место прямо сейчас.',formula:'«Не ловлю наживку. Играю задачу.»',benefit:'Ты сохраняешь себе голову, темп и свободу хода вместо того, чтобы отдать их первой же провокации.'},
+  first:{title:'Не женись на первой позиции',text:'Похоже, твой главный риск — слишком быстро приклеиться к первому ходу, который показался разумным. Первая мысль может быть сильной, но если в неё влюбиться слишком рано, поле игры резко сужается.',focus:'После первого решения специально ищи ещё два. Оставляй себе право перестроить линию, если по ходу открывается что-то лучше.',risk:'Тебя может утащить в упорство ради красивой первой идеи, даже когда стол уже просит более гибкой игры.',formula:'«Первая ставка — ещё не вся партия.»',benefit:'Ты играешь не красиво ради идеи, а выгодно ради результата.'},
+  interests:{title:'Сначала вскрывай интересы',text:'Похоже, перед игрой тебе особенно важно не торопиться спорить с позицией. Пока ты работаешь только с тем, что другая сторона заявляет вслух, ты ещё не дошёл до самого ценного слоя.',focus:'Больше вопросов, меньше поспешных выводов. Ищи, чего человек хочет добиться, чего опасается и что для него действительно критично.',risk:'Тебя может утащить в торг по поверхности: условия, формулировки, упирание в слова — без доступа к реальному интересу.',formula:'«Пока не понял интерес — я ещё не начал играть.»',benefit:'Ты быстрее находишь пространство для настоящего обмена, а не просто споришь о декорациях.'},
+  pause:{title:'Держи паузу, не суетись',text:'Похоже, твой ключевой навык на эту игру — темп. Если разговор подвисает, может захотеться быстрее заполнить тишину, договорить, пояснить, дожать. Но иногда именно в паузе другая сторона раскрывает больше, чем планировала.',focus:'Не спасай тишину словами. Дай паузе поработать. Смотри, что появляется после того, как ты не кинулся закрывать пустоту.',risk:'Тебя может утащить в нервную болтовню, объяснения сверх меры и лишние ходы только потому, что стало неуютно молчать.',formula:'«Тишина не против меня. Тишина работает на меня.»',benefit:'Ты лучше держишь контроль над темпом и реже раскрываешь лишнее раньше времени.'},
+  combo:{title:'Играй не одним ходом, а комбинацией',text:'Похоже, перед игрой тебе особенно полезно включать творческую сборку. Не тащить одну просьбу, одну уступку или один аргумент, а думать конструкциями: что можно связать, чем обменяться, как пересобрать поле.',focus:'Ищи пакеты, а не единичные уступки. Собирай варианты обмена, меняй форму сделки, расширяй стол.',risk:'Тебя может утащить в прямолинейную игру, где остаётся только «да / нет» и борьба за одну линию.',formula:'«Не один ход. Комбинация.»',benefit:'Ты быстрее находишь ходы там, где другим уже кажется, что пространство закончилось.'}
+};
+const QUESTIONS=[
+  {tag:'Бестактность',text:'Если собеседник начинает с лёгкой бестактности или снисходительного тона, ты чаще…',help:'Выбери вариант, который больше всего похож на тебя.',options:[
+    {t:'сразу внутренне заводишься и хочешь поставить его на место',m:'tact'},
+    {t:'стараешься не цепляться и возвращаешь разговор к сути',m:'tact',w:2},
+    {t:'пытаешься сгладить тон, чтобы не обострять',m:'pause'},
+    {t:'начинаешь быстрее продавливать свою позицию, пока не стало хуже',m:'tact'}]},
+  {tag:'Первое предложение',text:'Если тебе сходу предлагают невыгодный вариант, ты чаще…',help:'Что происходит у тебя первым движением.',options:[
+    {t:'сразу споришь по условиям',m:'first'},
+    {t:'спрашиваешь, почему для другой стороны это выглядит разумным',m:'interests',w:2},
+    {t:'ищешь, что можно перестроить в конструкции предложения',m:'combo',w:2},
+    {t:'настораживаешься и начинаешь защищать минимум своих интересов',m:'tact'}]},
+  {tag:'Когда уходит контроль',text:'Когда ты чувствуешь, что разговор уходит не туда, тебе естественнее…',help:'Какой ход срабатывает у тебя автоматически.',options:[
+    {t:'взять паузу и вернуть себе контроль над темпом',m:'pause',w:2},
+    {t:'начать задавать больше вопросов',m:'interests'},
+    {t:'жёстче обозначить рамку',m:'tact'},
+    {t:'быстрее предложить решение, чтобы не вязнуть',m:'first'}]},
+  {tag:'Повтор позиции',text:'Если собеседник повторяет одну и ту же позицию, ты чаще…',help:'Что ты начинаешь делать в этот момент.',options:[
+    {t:'повторяешь свою ещё убедительнее',m:'first'},
+    {t:'пробуешь понять, какой интерес за ней стоит',m:'interests',w:2},
+    {t:'ищешь неожиданный обмен или новый ракурс',m:'combo',w:2},
+    {t:'начинаешь раздражаться на его негибкость',m:'tact'}]},
+  {tag:'Твой главный риск',text:'В игре тебе обычно труднее всего…',help:'Где у тебя чаще всего тонкое место.',options:[
+    {t:'не реагировать на провокацию',m:'tact',w:2},
+    {t:'не цепляться за первую пришедшую в голову линию',m:'first',w:2},
+    {t:'не торопиться и выдерживать паузу',m:'pause',w:2},
+    {t:'придумывать не один ход, а несколько вариантов обмена',m:'combo',w:2}]},
+  {tag:'После твоего хода — тишина',text:'Если другая сторона молчит после твоего предложения, ты чаще…',help:'Что ты обычно делаешь с этой паузой.',options:[
+    {t:'начинаешь заполнять тишину объяснениями',m:'pause'},
+    {t:'выдерживаешь паузу и смотришь, что будет дальше',m:'pause',w:2},
+    {t:'уточняешь, что именно она сейчас обдумывает',m:'interests'},
+    {t:'нервничаешь, что предложение прозвучало слабо',m:'tact'}]},
+  {tag:'Сильная идея',text:'Когда у тебя появляется сильная идея, ты чаще…',help:'Как ты обходишься с хорошим первым ходом.',options:[
+    {t:'быстро в неё влюбляешься и хочешь её дотащить',m:'first',w:2},
+    {t:'проверяешь, какие ещё есть линии кроме этой',m:'first'},
+    {t:'сразу несёшь её в разговор',m:'pause'},
+    {t:'сначала смотришь, на какие интересы другой стороны она может лечь',m:'interests'}]},
+  {tag:'Личный укол',text:'Если собеседник цепляется к словам или поддевает тебя лично, ты чаще…',help:'Выбери самый жизненный вариант.',options:[
+    {t:'отвечаешь на это прямо',m:'tact',w:2},
+    {t:'стараешься не играть в этот мяч и держать линию разговора',m:'tact'},
+    {t:'начинаешь объяснять себя и свои намерения',m:'pause'},
+    {t:'внутренне закрываешься и теряешь охоту продолжать',m:'tact'}]},
+  {tag:'Скрытый интерес',text:'Когда ты не понимаешь, чего на самом деле хочет другая сторона, ты чаще…',help:'Какой путь у тебя включается первым.',options:[
+    {t:'всё равно начинаешь торговаться по условиям',m:'interests'},
+    {t:'задаёшь вопросы, чтобы вскрыть интересы',m:'interests',w:2},
+    {t:'пробуешь накидывать разные варианты и смотришь на реакцию',m:'combo'},
+    {t:'ориентируешься на первое очевидное предположение',m:'first'}]},
+  {tag:'Твой естественный темп',text:'В переговорах тебе обычно комфортнее…',help:'Где тебе проще держаться уверенно.',options:[
+    {t:'идти быстро и решительно',m:'first'},
+    {t:'сначала собрать побольше информации',m:'interests'},
+    {t:'держать ровный темп и не дёргаться',m:'pause',w:2},
+    {t:'играть комбинациями, а не одним требованием',m:'combo',w:2}]},
+  {tag:'Если ход не сработал',text:'Если твой ход не сработал, ты чаще…',help:'Что ты делаешь дальше.',options:[
+    {t:'начинаешь сильнее давить',m:'tact'},
+    {t:'меняешь формулировку, но не саму логику',m:'first'},
+    {t:'пробуешь другой ракурс или новый пакет обмена',m:'combo',w:2},
+    {t:'возвращаешься к вопросам и разведке',m:'interests',w:2}]},
+  {tag:'Внутренняя ставка',text:'Что тебе ближе как внутренняя опора в игре?',help:'Выбери ту фразу, которая сильнее откликается.',options:[
+    {t:'«Не дать себя продавить»',m:'tact'},
+    {t:'«Понять, что реально важно другой стороне»',m:'interests',w:2},
+    {t:'«Не срываться в реакцию»',m:'pause',w:2},
+    {t:'«Не застревать в одном сценарии»',m:'combo',w:2}]}];
+let state={index:0,answers:{}};
+const startScreen=document.getElementById('startScreen'),quizScreen=document.getElementById('quizScreen'),resultScreen=document.getElementById('resultScreen');
+const progressText=document.getElementById('progressText'),progressBar=document.getElementById('progressBar'),questionTag=document.getElementById('questionTag'),questionText=document.getElementById('questionText'),questionHelp=document.getElementById('questionHelp'),questionBody=document.getElementById('questionBody');
+function saveState(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}
+function clearState(){localStorage.removeItem(STORAGE_KEY);}
+function loadState(){try{const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return false;const parsed=JSON.parse(raw);if(typeof parsed.index!=='number')return false;state=parsed;return true;}catch(e){return false;}}
+function currentQuestion(){return QUESTIONS[state.index];}
+function renderQuestion(){const q=currentQuestion();progressText.textContent=`Вопрос ${state.index+1} из ${QUESTIONS.length}`;progressBar.style.width=`${((state.index+1)/QUESTIONS.length)*100}%`;questionTag.textContent=q.tag;questionText.textContent=q.text;questionHelp.textContent=q.help||'';questionBody.innerHTML='';const saved=state.answers[state.index];const wrap=document.createElement('div');wrap.className='options';q.options.forEach((opt,idx)=>{const letter=String.fromCharCode(1040+idx);const box=document.createElement('div');box.className='option';if(saved===idx)box.classList.add('selected');box.addEventListener('click',()=>{state.answers[state.index]=idx;saveState();renderQuestion();});const top=document.createElement('div');top.className='option-top';const badge=document.createElement('div');badge.className='badge';badge.textContent=letter;const st=document.createElement('div');st.className='statement';st.textContent=opt.t;top.appendChild(badge);top.appendChild(st);box.appendChild(top);wrap.appendChild(box);});questionBody.appendChild(wrap);document.getElementById('prevBtn').disabled=state.index===0;document.getElementById('nextBtn').textContent=state.index===QUESTIONS.length-1?'Показать результат':'Дальше';}
+function score(){const totals={tact:0,first:0,interests:0,pause:0,combo:0};QUESTIONS.forEach((q,qi)=>{const ans=state.answers[qi];if(Number.isInteger(ans)){const opt=q.options[ans];totals[opt.m]+=(opt.w||1);}});return totals;}
+function renderResults(){const totals=score();const ranked=Object.entries(totals).sort((a,b)=>b[1]-a[1]);const modeKey=ranked[0][0];const m=MODES[modeKey];document.getElementById('resultTitle').textContent=m.title;document.getElementById('resultText').textContent=m.text;document.getElementById('focusText').textContent=m.focus;document.getElementById('riskText').textContent=m.risk;document.getElementById('formulaText').textContent=m.formula;document.getElementById('benefitText').textContent=m.benefit;clearState();quizScreen.classList.add('hidden');startScreen.classList.add('hidden');resultScreen.classList.remove('hidden');}
+function startTest(){state={index:0,answers:{}};saveState();startScreen.classList.add('hidden');resultScreen.classList.add('hidden');quizScreen.classList.remove('hidden');renderQuestion();}
+function nextQuestion(){if(state.index<QUESTIONS.length-1){state.index+=1;saveState();renderQuestion();}else renderResults();}
+function prevQuestion(){if(state.index>0){state.index-=1;saveState();renderQuestion();}}
+function skipQuestion(){delete state.answers[state.index];if(state.index<QUESTIONS.length-1){state.index+=1;saveState();renderQuestion();}else renderResults();}
+function restartTest(){clearState();state={index:0,answers:{}};resultScreen.classList.add('hidden');quizScreen.classList.add('hidden');startScreen.classList.remove('hidden');}
+document.getElementById('startBtn').addEventListener('click',startTest);document.getElementById('nextBtn').addEventListener('click',nextQuestion);document.getElementById('prevBtn').addEventListener('click',prevQuestion);document.getElementById('skipBtn').addEventListener('click',skipQuestion);document.getElementById('restartBtn').addEventListener('click',restartTest);
+window.addEventListener('load',()=>{if(loadState()){startScreen.classList.add('hidden');resultScreen.classList.add('hidden');quizScreen.classList.remove('hidden');renderQuestion();}});
+</script>
+</body>
+</html>
